@@ -1,0 +1,124 @@
+<app-navbar></app-navbar><br>
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div class="container col-3 md-4">
+        <h2 class="header">Login</h2>
+        <form #templateForm="ngForm" (ngSubmit)="onTemplateSubmit(templateForm.value)">
+            <div class="form-outline mb-4">
+                <input ngModel name="email" type="email" id="form1Example1" class="form-control" />
+                <label class="form-label" for="form1Example1">Email address</label>
+            </div>
+
+            <div class="form-outline mb-4">
+                <input ngModel name="password" type="password" id="form1Example2" class="form-control" />
+                <label class="form-label" for="form1Example2">Password</label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+            <div class="form-check">
+              <br>
+              <label class="form-check-label" for="form1Example3">Not a member  <a routerLink="/register"class="register-link">Register</a></label>
+             
+            </div>
+          </form>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container col-3 md-4">
+  <form #templateForm="ngForm" (ngSubmit)="onTemplateSubmit(templateForm.value)">
+      <div class="form-outline mb-4">
+          <input type="email" id="form1Example1" class="form-control" />
+          <label class="form-label" for="form1Example1">Email address</label>
+      </div>
+
+      <div class="form-outline mb-4">
+          <input type="password" id="form1Example2" class="form-control" />
+          <label class="form-label" for="form1Example2">Password</label>
+      </div>
+
+      <div class="row mb-4">
+          <div class="col d-flex align-items-center">
+              <div class="form-check">
+                  
+                  <label class="form-check-label" for="form1Example3">Not a member</label>
+              </div>
+          </div>
+
+          <div class="col">
+              <a href="#!" class="register-link">Register</a>
+          </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+  </form>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

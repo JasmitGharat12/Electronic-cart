@@ -1,0 +1,30 @@
+<app-navbar></app-navbar>
+
+<br />
+<div class="container">
+  <div class="row">
+    <div class="col-md-3" *ngFor="let p of productDataFromDatabase">
+      <div class="card mb-4">
+        <img src="assets/images/{{ p.product_image }}.jpg" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">{{ p.product_name }}</h5>
+          <p class="card-text"></p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item card-title">
+            <b>{{ p.product_price }} Rs</b>
+          </li>
+          <li class="list-group-item">{{ p.product_description }}</li>
+        </ul>
+        <div class="card-body">
+          <a (click)="addToCart(p)" routerLink="/cart" class="btn btn-primary">Add To Cart</a>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
+
+<router-outlet></router-outlet>

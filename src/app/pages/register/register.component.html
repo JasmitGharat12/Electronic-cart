@@ -1,0 +1,71 @@
+<app-navbar></app-navbar><br />
+<div class="container col-3 md-4">
+  <form [formGroup]="reactiveForm" (ngSubmit)="onReactiveSubmit(reactiveForm.value)" class="border p-4 rounded">
+    <!-- First Name -->
+    <div class="form-outline mb-4">
+      <input type="text" formControlName="firstname" class="form-control" />
+      <label class="form-label" for="form1Example1">First Name</label>
+      <div class="warning-text" *ngIf="
+          reactiveForm.get('fname')?.hasError('required') &&
+          reactiveForm.get('fname')?.touched
+        ">
+        First name is required
+      </div>
+    </div>
+
+    <!-- Last Name -->
+    <div class="form-outline mb-4">
+      <input type="text" formControlName="lastname" class="form-control" />
+      <label class="form-label" for="form1Example2">Last Name</label>
+      <div class="warning-text" *ngIf="
+          reactiveForm.get('lname')?.hasError('required') &&
+          reactiveForm.get('lname')?.touched
+        ">
+        Last name is required
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="form-outline mb-4">
+      <input type="email" formControlName="email" class="form-control" />
+      <label class="form-label" for="form1Example1">Email address</label>
+      <div class="warning-text" *ngIf="
+          reactiveForm.get('lname')?.hasError('required') &&
+          reactiveForm.get('email')?.touched
+        ">
+        Invalid Email
+      </div>
+    </div>
+
+    <!-- Phone -->
+    <div class="form-outline mb-4">
+      <input type="number" formControlName="phone" class="form-control" />
+      <label class="form-label" for="form1Example2">Phone</label>
+      <div class="warning-text" *ngIf="
+          reactiveForm.get('lname')?.hasError('required') &&
+          reactiveForm.get('phone')?.touched
+        ">
+        Invalid Phone Number
+      </div>
+    </div>
+
+    <!-- Password -->
+    <div class="form-outline mb-4">
+      <input type="password" formControlName="password" class="form-control" />
+      <label class="form-label" for="form1Example1">Password</label>
+      <div class="warning-text" *ngIf="
+          reactiveForm.get('lname')?.hasError('required') &&
+          reactiveForm.get('pass')?.touched
+        ">
+        Password required
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+  </form>
+</div>
+
+<div class="container col-3">
+<button class=" btn btn-danger" (click)=" getData()">Get</button>
+</div>
